@@ -1,0 +1,10 @@
+name: TntTag
+main: net.kokoricraft.tnttag.TntTag
+version: 1.0.0
+api-version: 1.16
+author: FavioMC19
+commands:
+   tnttag:
+      description: Compando principal
+      usage: /<command>
+      aliases: [papa]

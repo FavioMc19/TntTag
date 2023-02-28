@@ -1,0 +1,33 @@
+segundos_por_ronda: 60
+explosion_size: 2
+
+modo_de_juego:
+  modo: GAMEMODE
+  gamemodes:
+   - ADVENTURE
+   - SURVIVAL
+
+permissions:
+  player: "tnttag.player"
+  spectator: "tnttag.spectator"
+
+messages:
+  time_format: "&e<hours>&7:&e<minutes>&7:&e<seconds>"
+  tagged_time_format: "&c☠ &e<hours>&7:&e<minutes>&7:&e<seconds> &c☠"
+  
+  tagged_chat_message: "&7El jugador %player% tiene la papa caliente!"
+  tag_subtitle_message: "&cTienes la papa caliente. ☠"
+  
+  eliminated_chat_message: "&cEl jugador %player% fue eliminado."
+  eliminated_kick_message: "&cHas sido eliminado."
+  
+sounds:
+  tagged_player:
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1
+    pitch: 0
+  
+  last_seconds:
+    sound: BLOCK_NOTE_BLOCK_BIT
+    volume: 0.8
+    pitch: 0
