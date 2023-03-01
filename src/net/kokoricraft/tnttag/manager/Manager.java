@@ -90,7 +90,7 @@ public class Manager {
 					
 					player.spigot().sendMessage(ChatMessageType.ACTION_BAR, plugin.getUtils().getTextComponent(plugin.getUtils().getDurationString(time, tagged)));
 					
-					if(time <= 10)
+					if(time <= 10 && tagged)
 						plugin.getConfigManager().last_seconds_sound.play(player);
 				}
 			}
@@ -148,7 +148,10 @@ public class Manager {
 	
 	private void fillTagged() {
 		if(!pre_tagged_players.isEmpty()) {
-			tagged_players.addAll(pre_tagged_players);
+			for(Player pre : pre_tagged_players) {
+				if(!tagged_players.contains(pre))
+					pre_tagged_players.add(pre);
+			}
 			pre_tagged_players.clear();
 		}
 		
@@ -163,7 +166,7 @@ public class Manager {
 			
 			int index = ThreadLocalRandom.current().nextInt(players.size());
 			tagged_players.add(players.get(index));
-			
+			players.remove(index);
 			if(tagged_players.size() >= max_tagged_players)
 				break;
 		}

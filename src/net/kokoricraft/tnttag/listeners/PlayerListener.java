@@ -43,4 +43,5 @@ public class PlayerListener implements Listener{
 			plugin.getManager().explodePlayer(player);
 		}
 	}
+	
 }
